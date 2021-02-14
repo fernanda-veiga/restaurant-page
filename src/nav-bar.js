@@ -15,16 +15,17 @@ function generateNavBar() {
     let navLinksDiv = document.createElement("div");
     let navLinks = [];
 
-    for(let i = 0; i < 4; i++) {
+    for(let i = 0; i < 3; i++) {
         navLinks.push(document.createElement("a"));
         navLinks[i].setAttribute("href", "#");
         navLinks[i].classList.add("nav-links");
     }
 
-    navLinks[0].textContent = "ABOUT US"
-    navLinks[1].textContent = "MENU";
-    navLinks[2].textContent = "LOCATION";
-    navLinks[3].textContent = "CONTACT";
+    navLinks[0].textContent = "HOMEPAGE"
+    navLinks[1].textContent = "ABOUT US"
+    navLinks[2].textContent = "MENU";
+    //navLinks[2].textContent = "LOCATION";
+    //navLinks[3].textContent = "CONTACT";
 
     navLinks.forEach(item => navLinksDiv.appendChild(item));
 
