@@ -7,62 +7,35 @@
 #content {
     width: 100vw;
     height: 100vh;
-    /*background-image: url("https://images.unsplash.com/photo-1534482421-64566f976cfa?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1049&q=80");*/
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: #fdf4ee;
 }
 
+/*NAVBAR*/
 nav {
     height: 15vh;
     width: 100vw;
-    box-shadow: 0 0 2px #EAF3F5;
-    background-color: #0F0F0F;
-    padding: 8vh;
+    background-color: #f1ced3;
+    padding: 10px 65px 10px 75px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
-
-.nav-links {
-    color: #EAF3F5;
-    font-family: 'Raleway', sans-serif;
-    text-decoration: none;
+    position: relative;
+    z-index: 1;
 }
 
 .logo {
-    color: #EAF3F5;
-    font-family: 'Raleway', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color: #fdf4ee;
+    text-shadow: 0 0 5px #e6809d;
+    font-family: 'Sacramento', cursive;
+    font-size: 40px;
 }
 
-#restaurant-name {
-    font-size: 2.5em;
-}
-
-.social-media-links {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.social-media {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 20px;
-    background-color: #EAF3F5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-media a {
-    color: #0F0F0F;
+.nav-links {
+    color: #e6809d;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
 /*Hover effect*/
@@ -79,7 +52,6 @@ nav {
     width: 100%;
     height: 1px;
     background: currentColor;
-
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-in;
@@ -90,36 +62,133 @@ nav {
     transform-origin: left;
 }
 
-/*ABOUT US PAGE*/
-.about-us-page {
+/*HOMEPAGE*/
+.homepage-content {
+    height: 85vh;
     width: 100vw;
-    height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80vh;
-    padding: 10vw;
+    grid-gap: 50px;
+    /*position: relative;
+    z-index: 1;*/
+    padding: 40px 150px;
 }
 
-#about-us-img, #about-us-text {
-    padding: 20px;
+.text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-#about-us-img {
-    border-right: 1px solid #0F0F0F;
+.text-div h3 {
+    color: #E48FA7;
+    font-family: 'Sacramento', cursive;
+    font-size: 4.5em;
 }
 
-#about-us-img img {
-    width: 100%;
-    height: 50vh;
+.text-div h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.text-div p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.text-div button {
+    color: #fdf4ee;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px;
+    background-color: #8099C7;
+    border-radius: 2em;
+    border: 2px solid #8099C7;
+    transition: all 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+
+.text-div button:hover {
+    box-shadow: 0 0 4px gray;
+}
+
+.image-div {
+    position: relative;
+}
+
+.image-div img {
     object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
 }
 
-#about-us-text {
-    color: #0F0F0F;
-    font-family: 'Raleway', sans-serif;
-    text-align: justify;
+#image1 {
+    width: 400px;
+    height: 400px;
 }
 
-#about-us-text h1 {
-    margin-bottom: 10px;
+#image2 {
+    width: 300px;
+    height: 300px;
+    object-position: 0 50%;
+    bottom: 0;
+    right: 0;
+}
+
+#circle {
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    z-index: 0;
+    background-color: #f1ced3;
+    top: -30vw;
+    right: -45vw;
+    border-radius: 50%;
+}
+
+/*ABOUT US*/
+.about-us-content {
+    height: 85vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    padding: 40px 150px;
+}
+
+.about-us-image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-image-div img {
+    box-shadow: 1px 1px 5px gray;
+}
+
+.social-media-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: #8099C7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-link a {
+    color: #fdf4ee;
 }
